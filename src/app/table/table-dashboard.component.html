@@ -1,0 +1,24 @@
+
+
+    <input
+    type='text'
+    style='padding:8px;margin:15px auto;width:30%;'
+    placeholder='Type to filter based on Customer Name / Status...'
+    (keyup)='updateFilter($event)'
+  />
+
+<ngx-datatable #table style="height: 500px;width:100%"  class='material' [headerHeight]="50" [sortType]="'multi'" [scrollbarV]="true"  [scrollbarH]="true"
+      [rows]="vehicleDetails">
+      <ngx-datatable-column name="Customer Name" prop="customerName"  width="275"></ngx-datatable-column>
+      <ngx-datatable-column name="Vehicle ID" prop="vehicleID"  width="275"></ngx-datatable-column>
+      <ngx-datatable-column name="Reg #" prop="reg_nr"  width="200"></ngx-datatable-column>
+      <ngx-datatable-column name="Vehicle Status" prop="vehicleStatus"  width="200">
+        <ng-template let-row="row" let-value="value">
+          <div *ngIf="value === 'Active'"><span class="label-active">{{value}}</span></div>
+          <div *ngIf="value === 'Disconnected'"><span class="label-disconnected"><strong>DISCONNECTED</strong></span></div>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Customer Address" prop="customerAddress"  width="275"></ngx-datatable-column>
+</ngx-datatable>
+
+     
