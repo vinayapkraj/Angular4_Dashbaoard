@@ -2,8 +2,7 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
-import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { TabsModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { CommonModule } from '@angular/common';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable'
 
@@ -21,8 +20,6 @@ import {TableDashboardService} from './services/table-dashboard.service';
     BrowserModule,
     HttpModule,
     FormsModule,
-    PaginationModule,
-    TabsModule,
     CommonModule
   ],
   providers: [TableDashboardService],
